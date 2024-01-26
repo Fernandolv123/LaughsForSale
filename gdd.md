@@ -1,4 +1,4 @@
-# LaughsForSale
+# Laughs For Sale
 
 ## Descripcion general
 
