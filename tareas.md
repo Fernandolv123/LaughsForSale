@@ -1,1 +1,4 @@
-https://discord.gg/DrvzBWCk7p
+- Programación: Interfaz
+- Programación: Mecánicas
+- Arte: Personajes
+- Arte: Objetos
