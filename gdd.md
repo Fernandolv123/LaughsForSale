@@ -105,14 +105,14 @@ Los clientes serán:
 - Chef
 - Traficante: este cliente será relevante en la obtencion del final del polvo de la risa.
 - Conserje
-- Niño: este cliente aparecera como jefe.
+- Niño
 - Alien ???: este cliente será relevante en el final espacial.
 - Fantasma ???: Este cliente resulta algo especial, aparecerá y dirá un chiste antes de irse.
 - Rey
 - Cura
 - Hada
 - hombre trajeado
-- Comunista
+- Comunista: Este personaje aparecerá a modo de jefe
 - Jesucristo
 - Mariachi
 - Embarazada
