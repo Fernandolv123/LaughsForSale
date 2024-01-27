@@ -6,6 +6,7 @@ using UnityEngine;
 public class DragNDropExample : MonoBehaviour
 {
     public GameObject hoverText;
+    public ObjectTag objectTag;
 
     private Vector3 canvasCenterOffset;
     // Start is called before the first frame update
@@ -21,6 +22,8 @@ public class DragNDropExample : MonoBehaviour
         float cWidth = rectT.rect.width * rectT.localScale.x * transform.localScale.x;
         float cHeight = rectT.rect.height * rectT.localScale.y * transform.localScale.y;
         canvasCenterOffset = new Vector3(cWidth / 2, cHeight / 2, 0);
+
+        objectTag = GetComponent<ObjectTag>();
     }
 
 
@@ -28,6 +31,7 @@ public class DragNDropExample : MonoBehaviour
     {
         GetComponent<SpriteRenderer>().color = Color.white;
         Debug.Log($"[DragNDropExample] Object {gameObject.name} dropped on {transform.position}");
+        CheckForCustomer();
     }
 
     private void Dragged()
@@ -44,5 +48,26 @@ public class DragNDropExample : MonoBehaviour
     private void HoverExited()
     {
         hoverText.SetActive(false);
+    }
+
+    private void CheckForCustomer()
+    {
+        CustomerObjectReception cor = ClickedObject()?.GetComponent<CustomerObjectReception>();
+        if(cor != null)
+        {
+            cor.ReceiveObject(objectTag.objectTag, objectTag.combo?.comboTag);
+        }
+    }
+
+    private Transform ClickedObject()
+    {
+        
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.zero, 0);
+        if (hit.collider != null)
+        {
+            return hit.collider.transform;
+        }
+
+        return null;
     }
 }

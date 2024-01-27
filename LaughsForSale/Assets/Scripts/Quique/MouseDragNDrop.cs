@@ -47,7 +47,7 @@ public class MouseDragNDrop : MonoBehaviour
 
         if (!isDragged && IsClicked())
         {
-            Debug.Log("Hover");
+            //Debug.Log("Hover");
             isHovered = true;
             if (ObjectHovered != null)
             {
