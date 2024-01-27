@@ -57,7 +57,7 @@ Los clientes entrarán en fila, cada uno indicará la forma en la que el jugador
 Los clientes aparecerán con un fade in cambiando el canal alpha y realizando una animación de subir y bajar, simulando el andar.
 
 Los clientes serán:
-- Otaku:
+- Otaku
 - Fan de los gatos
 - Policia: este cliente será relevante en la obtencion del final del polvo de la risa.
 - Bruja:
@@ -80,3 +80,16 @@ Los clientes serán:
 - Enamorados
 - Cura
 - Hada
+- Critico: este personaje no presentará cambios en su rostro, pero el risómetro cambiará al final del día
+
+# Asignaciones
+
+Funcionalidades Drag 'n Drop y hover-> Quique
+
+Pantalla del menu de compra de seleccion de objetos -> Brais
+
+Criba de Objetos (12 escoger 6 combo) y personajes -> Fernando y Lucas
+
+Arte y diseño -> Diego
+
+
