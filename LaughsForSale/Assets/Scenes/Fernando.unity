@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1701957375}
   - component: {fileID: 1701957374}
+  - component: {fileID: 1701957376}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -153,8 +154,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   customer: {fileID: 7206798430901447802, guid: 8526b2f2eb4c22245a84653b81e96ef3, type: 3}
+  customer2: {fileID: 2310138975110457340, guid: 5916b94949e110142a9d735cae03ed66, type: 3}
   listCustomer: []
   numberOfCustomers: 0
+  atendingCustomer: 0
 --- !u!4 &1701957375
 Transform:
   m_ObjectHideFlags: 0
@@ -170,6 +173,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1701957376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701957373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5519126b2ce9574408367b6017268acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1883791628
 GameObject:
   m_ObjectHideFlags: 0
