@@ -26,27 +26,56 @@ Cuando juegas partidas se guardará informacion sobre los objetos conseguidos.
 Existirán dos tipos de objetos, aquellos cuyo propósito es la creación de combos y por lo tanto no pueden ser utilizados por sí mismos y los elementos principales que se podrán utilizar individualmente.
 
 Al empezar cada día, el jugador debe escoger 6 objetos de una lista que combinará con los 3 objetos de combo escogidos aleatoriamente:
-- Gato
-- Matasuegras
-- Palo
-- Escobilla de bater
-- Polvo de la risa
-- Muñeca hinchable
-- Deposiciones
-- Cojín de aire
-- Tarta
-- Platanos
-- Libro de mates
-- Videojuego
-- Careta de payaso
-- Pepino
-- Pistola de agua
-- canción graciosa
-- Cosplay
-- Cerillas
-- Baraja de cartas
-- Lienzo
-- conejo
+- Gato: combo
+- Matasuegras: solitario
+- Palo: solitario
+- Escobilla de bater: solitario
+- Polvo de la risa: especial
+- Muñeca: solitario
+- Caca: combo 
+- Cojín de aire: solitario
+- papel de burbujas: solitario
+- Metal Pipe: solitario
+- Libro: combo 
+- Videojuego: solitario
+- Careta de payaso: solitario
+- Pepino: solitario
+- Pistola de agua: solitario
+- Cosplay: solitario
+- Cerillas: combo
+- varita mágica: combo
+- coche de juguete: solitario
+- martillo: combo
+- peluca: solitario
+- globo: solitario
+- silbato: solitario
+- gafas graciosas: solitario
+- cerveza: solitario
+- paleta pin pon con cuerda: solitario
+- Dibujo: solitario
+- Peluche: solitario
+- Pogo: solitario
+- pato de goma: solitario
+- unicornio: solitario
+- Jack in the box: solitario
+- chuches: solitario
+- pelota: solitario
+- tanque: solitario
+- dinero: solitario
+- Avion de papel: solitario
+
+Habrá un total de 30 objetos primarios y 6 objetos de combo y cada día el jugador podrá escojer entre una pull de objetos paulatinamente más grande
+
+Pull de objetos por día:
+
+Dia 1: 9 objetos
+Dia 2: 12
+Dia 3: 15
+dia 4 18
+dia 5: 21
+dia 6: 24
+dia 7: 27
+dia 8: 30
 
 A mayores de los objetos, el jugador tendrá la posibilidad de contar un chiste bajo cierto riesgo, pues al cliente puede no hacerle gracia.
 
@@ -60,27 +89,45 @@ Los clientes serán:
 - Otaku
 - Fan de los gatos
 - Policia: este cliente será relevante en la obtencion del final del polvo de la risa.
-- Bruja:
+- Bruja
 - Informático
 - Artista
 - Físico/Matemático
 - Payaso
 - Señor mayor
 - Emo: Este cliente aparecerá a modo de 'jefe'.
-- Personaje Parodia
 - Futbolista
 - Streamer/Youtuber
 - Chef
 - Traficante: este cliente será relevante en la obtencion del final del polvo de la risa.
 - Conserje
 - Niño: este cliente aparecera como jefe.
-- Alien: este cliente será relevante en el final espacial.
-- Fantasma: Este cliente resulta algo especial, aparecerá y dirá un chiste antes de irse.
+- Alien ???: este cliente será relevante en el final espacial.
+- Fantasma ???: Este cliente resulta algo especial, aparecerá y dirá un chiste antes de irse.
 - Rey
-- Enamorados
 - Cura
 - Hada
-- Critico: este personaje no presentará cambios en su rostro, pero el risómetro cambiará al final del día
+- hombre trajeado
+- Comunista
+- Jesucristo
+- Mariachi
+- Embarazada
+- Preso
+- Político
+- psicópata: Este cliente aparecerá a modo de 'jefe' te apuñala si fallas
+- Gordo
+- Robot: Este cliente aparecerá a modo de 'jefe'
+- Zombie: Este cliente aparecerá a modo de 'jefe'
+- Perro humanoide
+- Adolescente x1
+- Adolescente x2
+- Friki
+
+
+### Combos con personajes
+
+Cada personaje tendrá una serie de objetos preferidos y odiados
+
 
 # Asignaciones
 
