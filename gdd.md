@@ -79,6 +79,10 @@ dia 8: 30
 
 A mayores de los objetos, el jugador tendrá la posibilidad de contar un chiste bajo cierto riesgo, pues al cliente puede no hacerle gracia.
 
+### Combos de Objetos
+
+La tabla se encuentra en el archivo Comportamiento_Objetos.ods
+
 ### Clientes
 
 Los clientes entrarán en fila, cada uno indicará la forma en la que el jugador debe hacerlos reir ya sea vocal o somáticamente (dibujos en su camisa), hacerlos reir aumentará el risómetro del jugador mientras que no hacerlos reir disminuirá el risómetro. Al final de cada día menos del primero, aparecerá un cliente 'jefe' al que hará falta un mayor esfuerzo para hacerle sonreir.
