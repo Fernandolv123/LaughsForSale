@@ -6,12 +6,15 @@ using UnityEngine.Events;
 public class MouseDragNDrop : MonoBehaviour
 {
     public UnityEvent ObjectDragEnter;
-    public UnityEvent ObjectDropped;    
+    public UnityEvent ObjectDropped;
+    public UnityEvent<Vector3> ObjectHovered;
+    public UnityEvent ObjectHoverExited;
 
     private SpriteRenderer spriteRenderer;
     private Bounds boundingBox;
 
     private bool isDragged = false;
+    private bool isHovered = false;
     private Vector3 mouseToObjectOffset;
     // Start is called before the first frame update
     void Start()
@@ -27,14 +30,28 @@ public class MouseDragNDrop : MonoBehaviour
     {
         if( ! isDragged && Input.GetMouseButtonDown(0))
         {
-            if(IsClicked())
+            if (IsClicked())
             {
-                if(ObjectDragEnter != null)
+                mouseToObjectOffset = transform.position - MouseWorldPosition();
+                isDragged = true;
+                if (ObjectDragEnter != null)
                 {
                     ObjectDragEnter.Invoke();
                 }
-                mouseToObjectOffset = transform.position - MouseWorldPosition();
-                isDragged = true;
+                if (ObjectHoverExited != null)
+                {
+                    ObjectHoverExited.Invoke();
+                }
+            }
+        }
+
+        if (!isDragged && IsClicked())
+        {
+            Debug.Log("Hover");
+            isHovered = true;
+            if (ObjectHovered != null)
+            {
+                ObjectHovered.Invoke(MouseWorldPosition());
             }
         }
 
@@ -46,6 +63,16 @@ public class MouseDragNDrop : MonoBehaviour
             {
                 ObjectDropped.Invoke();
             }
+        }
+
+        if (isHovered && !IsClicked())
+        {
+            isHovered = false;
+            if (ObjectHoverExited != null)
+            {
+                ObjectHoverExited.Invoke();
+            }
+
         }
 
         if (isDragged)
