@@ -1208,7 +1208,7 @@ GameObject:
   - component: {fileID: 733779970}
   - component: {fileID: 733779969}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: CancelButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1277,7 +1277,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 733779970}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2110067189}
+        m_TargetAssemblyTypeName: UIEvents, Assembly-CSharp
+        m_MethodName: CancelButtonOnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &733779970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1671,6 +1683,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 888248612}
   m_CullTransparentMesh: 1
+--- !u!1 &997193013
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 997193015}
+  - component: {fileID: 997193014}
+  m_Layer: 0
+  m_Name: UserSelectionData
+  m_TagString: UserSelectionData
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &997193014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997193013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3927cc287eae6d94ba114ea9d1d4f47c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objsSel: []
+--- !u!4 &997193015
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997193013}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.16289, y: 0.56211007, z: -0.0013702442}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1033065407
 GameObject:
   m_ObjectHideFlags: 0
@@ -2196,37 +2253,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  objsDisp:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  objsDisp: []
   objsSel:
   - {fileID: 0}
   - {fileID: 0}
@@ -2236,6 +2263,11 @@ MonoBehaviour:
   - {fileID: 0}
   objSel: {fileID: 0}
   canvas: {fileID: 2110067187}
+  panelConfirmacion: {fileID: 1891702588}
+  maxSelectableObjectsCount: 6
+  freezeInteraction: 0
+  blockFreezeInteraction: 0
+  lastSelectedObjectsCount: 0
 --- !u!4 &1134531596
 Transform:
   m_ObjectHideFlags: 0
@@ -2789,7 +2821,7 @@ GameObject:
   - component: {fileID: 1655656520}
   - component: {fileID: 1655656519}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ConfirmButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2858,7 +2890,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1655656520}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2110067189}
+        m_TargetAssemblyTypeName: UIEvents, Assembly-CSharp
+        m_MethodName: ConfirmButtonOnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1655656520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4038,6 +4082,7 @@ GameObject:
   - component: {fileID: 2110067187}
   - component: {fileID: 2110067186}
   - component: {fileID: 2110067185}
+  - component: {fileID: 2110067189}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -4130,6 +4175,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 760, y: 427.6}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2110067189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110067184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b80af8537ef1ea34ebfd520d59569d92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelConfirmacion: {fileID: 1891702588}
 --- !u!1 &2112974618
 GameObject:
   m_ObjectHideFlags: 0
@@ -4210,6 +4268,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 2073512028}
+  - {fileID: 997193015}
   - {fileID: 2110067188}
   - {fileID: 150378175}
   - {fileID: 1134531596}

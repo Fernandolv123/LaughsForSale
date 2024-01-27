@@ -14,12 +14,16 @@ public class BraisMouseDragNDrop : MonoBehaviour
     public bool selected;
     public bool unlock;
 
+    public int maxSelectedObjects = 6;
+
     private SpriteRenderer spriteRenderer;
     private Bounds boundingBox;
 
     private bool isDragged = false;
     private bool isHovered = false;
     private Vector3 mouseToObjectOffset;
+
+    public bool freezeInteraction = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +38,12 @@ public class BraisMouseDragNDrop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        freezeInteraction = BraisGameManager.instance.freezeInteraction;
+        if(freezeInteraction)
+        {
+            return;
+        }
+       
         boundingBox = GetBoundingBox();
         if( ! isDragged && Input.GetMouseButtonDown(0))
         {
