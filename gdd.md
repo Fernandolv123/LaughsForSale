@@ -123,6 +123,7 @@ Los clientes serán:
 - Adolescente x2
 - Friki
 
+Los personajes que se aparecerán al día ante el jugador deberan de mantener mínimo una sinergia neutra con alguno de los objetos seleccionados por el jugador.
 
 ### Combos con personajes
 
