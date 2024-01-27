@@ -48,6 +48,8 @@ public class CustomerObjectReception : MonoBehaviour
 
         Debug.Log("Puntos " + pointsResult);
         //TODO: Sumar puntos. Feedback usuario. Marcharse y dar paso al siguiemte cliente
+
+        GetComponent<Customer>().StartCustomerOut();
     }
 
     private CharacterObjectInteraction SearchObjectInteraction(string tag)

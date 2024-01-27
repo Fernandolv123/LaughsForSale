@@ -9,6 +9,11 @@ public class DragNDropExample : MonoBehaviour
     public ObjectTag objectTag;
 
     private Vector3 canvasCenterOffset;
+
+    private Vector3 velocity;
+    private Vector3 startPosition;
+    private float returnSpeed = 20f;
+    private bool returningToStart = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,19 +29,36 @@ public class DragNDropExample : MonoBehaviour
         canvasCenterOffset = new Vector3(cWidth / 2, cHeight / 2, 0);
 
         objectTag = GetComponent<ObjectTag>();
+
+        startPosition = transform.position;
+    }
+
+    private void Update()
+    {
+        if (returningToStart)
+        {
+            transform.position += velocity * Time.deltaTime;
+            if ((transform.position - startPosition).magnitude < 0.2f)
+            {
+                velocity = Vector3.zero;
+                returningToStart = false;
+                transform.position = startPosition;
+                
+            }
+        }
     }
 
 
     private void Dropped()
     {
-        GetComponent<SpriteRenderer>().color = Color.white;
+        //GetComponent<SpriteRenderer>().color = Color.white;
         Debug.Log($"[DragNDropExample] Object {gameObject.name} dropped on {transform.position}");
         CheckForCustomer();
     }
 
     private void Dragged()
     {
-        GetComponent<SpriteRenderer>().color = Color.red;
+        //GetComponent<SpriteRenderer>().color = Color.red;
         Debug.Log($"[DragNDropExample] Object {gameObject.name} picked up on {transform.position}");
     }
     private void Hovered(Vector3 mousePosition)
@@ -56,7 +78,17 @@ public class DragNDropExample : MonoBehaviour
         if(cor != null)
         {
             cor.ReceiveObject(objectTag.objectTag, objectTag.combo?.comboTag);
+            Invoke("ReturnToStartPosition", 1f);
+        } else
+        {
+            ReturnToStartPosition();
         }
+    }
+
+    private void ReturnToStartPosition()
+    {
+        velocity = (startPosition - transform.position).normalized * returnSpeed;
+        returningToStart = true;
     }
 
     private Transform ClickedObject()

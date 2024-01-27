@@ -30,8 +30,7 @@ public class Customer : MonoBehaviour
             //Si el fadeIn no ha termiando, no se pasará de cliente
             if(Input.GetKey(KeyCode.W) && customerReady)
             {
-                StartCoroutine("FadeOut");
-                Invoke("CustomerOut",1f);
+                StartCustomerOut();
             }
         }
     }
@@ -40,6 +39,12 @@ public class Customer : MonoBehaviour
         active = false;
         GameManager.instance.atendingCustomer=false;
         Destroy(gameObject);
+    }
+
+    public void StartCustomerOut()
+    {
+        StartCoroutine("FadeOut");
+        Invoke("CustomerOut", 1f);
     }
 
     public void ChangeActive(bool change){

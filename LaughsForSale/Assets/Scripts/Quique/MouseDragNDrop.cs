@@ -28,7 +28,8 @@ public class MouseDragNDrop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if( ! isDragged && Input.GetMouseButtonDown(0))
+        boundingBox = GetBoundingBox();
+        if ( ! isDragged && Input.GetMouseButtonDown(0))
         {
             if (IsClicked())
             {

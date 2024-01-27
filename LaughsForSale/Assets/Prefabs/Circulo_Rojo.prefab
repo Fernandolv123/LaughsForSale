@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 2981443247484440175}
   - component: {fileID: 8539965330726061650}
   - component: {fileID: 2310138975110457340}
+  - component: {fileID: 4752910237424269116}
+  - component: {fileID: 2921255184083310835}
   m_Layer: 0
   m_Name: Circulo_Rojo
   m_TagString: Untagged
@@ -28,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.2273505, y: 1.8141942, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.5, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -97,3 +99,61 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 068b67265679f264398a7e5017ef9b67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!58 &4752910237424269116
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2177362589827295093}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!114 &2921255184083310835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2177362589827295093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a28f09f3d381c4c4b85b4dc77e678332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectInteractions:
+  - objectTag: Escobilla
+    laughScore: 10
+    killFactor: 1
+  - objectTag: Pepino
+    laughScore: -5
+    killFactor: 1
+  - objectTag: Gun
+    laughScore: -5
+    killFactor: 0
+  comboInteractions: []
