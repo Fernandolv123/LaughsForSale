@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MainGameScript : MonoBehaviour {
     public static MainGameScript instance;
@@ -21,6 +22,7 @@ public class MainGameScript : MonoBehaviour {
 
     private bool loadSelectedObjectsFlag;
     private bool intentoALaDesesperadaAllowed = false;
+    private bool started = false;
 
     void Awake() {
         instance = this;
@@ -117,20 +119,23 @@ public class MainGameScript : MonoBehaviour {
         }
         GameObject[] objs = GameObject.FindGameObjectsWithTag("UserSelectionData");
         //Debug.Log($"[MainGameScript.Update] {objs.Length}");
-        if (listCustomer.Count == 0)
+        if (listCustomer.Count == 0 && started)
         {
             //El dia terminaria al estar vacia la lista de clientes
             NextDay();
             return;
         }
         if (atendingCustomer) {
+            if(!started){
+                started = true;
+            }
             //Si hay un cliente siendo atendido, no pasar� al siguiente
             return;
         }
         //Pasamos al siguiente cliente si no estamos atendiendo a ninguno
         listCustomer[listCustomer.Count-1].ChangeActive(true);
         //Eliminamos al cliente de la lista
-        listCustomer.RemoveAt(listCustomer.Count-1);
+        //listCustomer.RemoveAt(listCustomer.Count-1);
         atendingCustomer = true;
     }
 
@@ -141,7 +146,12 @@ public class MainGameScript : MonoBehaviour {
     }
 
     private void NextDay() {
-        //Poner en este método el proceso de cambio de día
+        if(slide.value >= 50){
+            SceneManager.LoadScene("GoodEnding");
+        }
+        else if(slide.value < 50){
+            SceneManager.LoadScene("BadFinal");
+        }
     }
 
 
@@ -173,5 +183,9 @@ public class MainGameScript : MonoBehaviour {
         customerToAdd.transform.gameObject.transform.parent = canvas.transform.GetChild(3).gameObject.transform;
         customerToAdd.transform.gameObject.transform.localPosition = new Vector3(0,0,-1);
         customerToAdd.transform.gameObject.transform.localScale = new Vector2(159, 139);
+    }
+
+    public void UpdateList(){
+        listCustomer.RemoveAt(listCustomer.Count-1);
     }
 }
