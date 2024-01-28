@@ -14,6 +14,9 @@ public class DragNDropExample : MonoBehaviour
     private Vector3 startPosition;
     private float returnSpeed = 20f;
     private bool returningToStart = false;
+
+    //Medida semidesesperada para intentar pillar la posicion inicial del objeto
+    private bool setStartPositionFlag = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +38,11 @@ public class DragNDropExample : MonoBehaviour
 
     private void Update()
     {
+        if (setStartPositionFlag)
+        {
+            SetStartPosition();
+            setStartPositionFlag = false;
+        }
         if (returningToStart)
         {
             transform.position += velocity * Time.deltaTime;
@@ -101,5 +109,11 @@ public class DragNDropExample : MonoBehaviour
         }
 
         return null;
+    }
+
+    public void SetStartPosition()
+    {
+        startPosition = transform.position;
+        Debug.Log($"[DragNDropExample] startPosition {startPosition}");
     }
 }

@@ -5,11 +5,12 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class MainGameScript : MonoBehaviour {
+    public static MainGameScript instance;
 
     public List<Customer> customers;
     public List<Customer> listCustomer;
     public int numberOfCustomers;
-    public static MainGameScript instance;
+    
     public bool atendingCustomer;
 
     public GameObject[] prefabs;
@@ -37,7 +38,7 @@ public class MainGameScript : MonoBehaviour {
         objsSel = new List<GameObject>();
 
         GameObject[] objsSelected = GameObject.FindGameObjectsWithTag("UserSelectionData");
-        Debug.Log($"[MainGameScript] {objsSelected.Length}");
+        //Debug.Log($"[MainGameScript] {objsSelected.Length}");
         if (objsSelected.Length == 1)
         {
             LoadSelectedObjects(objsSelected);
@@ -77,6 +78,9 @@ public class MainGameScript : MonoBehaviour {
             go.transform.parent = canvas.transform.GetChild(1).gameObject.transform.GetChild(i).gameObject.transform;
             go.transform.localPosition = new Vector3(0, 0, -1);
             go.transform.localScale = new Vector2(75, 75);
+
+            //Tomar referencia de la posición inicial una vez colocado el objeto en su sitio;
+            go.GetComponent<DragNDropExample>().SetStartPosition();
         }
     }
 
@@ -88,7 +92,7 @@ public class MainGameScript : MonoBehaviour {
         {
             loadSelectedObjectsFlag = false;
             GameObject[] objsSelected = GameObject.FindGameObjectsWithTag("UserSelectionData");
-            Debug.Log($"[MainGameScript.Update] {objsSelected.Length}");
+            //Debug.Log($"[MainGameScript.Update] {objsSelected.Length}");
             if (objsSelected.Length == 1)
             {
                 LoadSelectedObjects(objsSelected);
@@ -99,7 +103,7 @@ public class MainGameScript : MonoBehaviour {
             }
         }
         GameObject[] objs = GameObject.FindGameObjectsWithTag("UserSelectionData");
-        Debug.Log($"[MainGameScript.Update] {objs.Length}");
+        //Debug.Log($"[MainGameScript.Update] {objs.Length}");
         if (listCustomer.Count == 0)
         {
             //El dia terminaria al estar vacia la lista de clientes
@@ -140,5 +144,13 @@ public class MainGameScript : MonoBehaviour {
             }
         }
         return null;
+    }
+
+    public void CheckSelectedObjectsLoad(GameObject[] objs)
+    {
+        if (objsSel.Count == 0)
+        {
+            LoadSelectedObjects(objs);
+        }
     }
 }

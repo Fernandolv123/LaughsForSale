@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class UserSelectionData : MonoBehaviour
 {
+    public List<string> selectedObjectsTags = new List<string>();
 
     void Awake()
     {
@@ -12,11 +13,19 @@ public class UserSelectionData : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        if(MainGameScript.instance != null)
+        {
+            MainGameScript.instance.CheckSelectedObjectsLoad(objs);
+            Debug.Log("[UserSelectionData] MainGameScript encontrado");
+        } else
+        {
+            Debug.Log("[UserSelectionData] MainGameScript no encontrado");
+        }
         DontDestroyOnLoad(this.gameObject);
     }
 
 
-    public List<string> selectedObjectsTags = new List<string>();
+
 
     // Start is called before the first frame update
     void Start()
