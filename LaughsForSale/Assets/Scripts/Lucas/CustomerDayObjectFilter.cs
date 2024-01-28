@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CustomerDayObjectFilter : MonoBehaviour
 {
-    public GameObject[] CustomerPrefabs; // Aquí deberán ir TODOS los prefabs de cliente existentes.
+    public GameObject[] customerPrefabs; // Aquí deberán ir TODOS los prefabs de cliente existentes.
     public GameObject[] currentObjectPool; 
     public GameObject[] bosses; // Se deben añadir los 4 bosses del juego en orden.
     public int day = 1; // Día actual.
@@ -14,10 +14,7 @@ public class CustomerDayObjectFilter : MonoBehaviour
     private bool loadObjectsFlag = true;
     void Start()
     {
-        Debug.Log(GetComponent<MainGameScript>().objsSel[0]+"Primer objeto");
-        currentObjectPool = GetComponent<MainGameScript>().objsSel.ToArray();
-        ShuffleArray(CustomerPrefabs);
-        FilterDayCustomers(day);
+        
     }
 
     void Update()
@@ -26,6 +23,8 @@ public class CustomerDayObjectFilter : MonoBehaviour
         if(loadObjectsFlag){
             if(MainGameScript.instance.objsSel.Count>0){
                 currentObjectPool = GetComponent<MainGameScript>().objsSel.ToArray();
+                ShuffleArray(customerPrefabs);
+                FilterDayCustomers(day);
                 loadObjectsFlag = false;
             }
             
@@ -37,19 +36,22 @@ public class CustomerDayObjectFilter : MonoBehaviour
     //En la función se también se le pasa el parámetro del día para establecer el boss y el número máximo de clientes.
     // PARA ALEATORIZACIÓN TOTAL AÑADIR EL MÉTODO SHUFFLEARRAY() ANTES DE ESTE MÉTODO.
     private void FilterDayCustomers(int day){
-        foreach (GameObject customer in CustomerPrefabs){
+        foreach (GameObject customer in customerPrefabs){
             for(int i = 0; i<customer.GetComponent<CustomerObjectReception>().objectInteractions.Count;i++){
                 for(int y = 0; y<currentObjectPool.Length;y++){
-                    if(filteredCustomers.Count+1 == clientsDay[day-1]){
+                    if(filteredCustomers.Count+1 == clientsDay[day-1]) {
                         if(day > 1){
-                            filteredCustomers.Add(bosses[day-2]);
+                            filteredCustomers.Add(Instantiate(bosses[day-2]));
                         }
                         return;
                     }
                     if(customer.GetComponent<CustomerObjectReception>().objectInteractions[i].objectTag == currentObjectPool[y].GetComponent<ObjectTag>().objectTag
                     && customer.GetComponent<CustomerObjectReception>().objectInteractions[i].laughScore >= 0){
                         if(!filteredCustomers.Contains(customer)){
-                            filteredCustomers.Add(customer);
+                            Debug.Log(customer.name);
+                            GameObject goCustomer = Instantiate(customer, new Vector2(0,0), Quaternion.identity);
+                            filteredCustomers.Add(goCustomer);
+                            MainGameScript.instance.AddCustomer(goCustomer);
                         }
                     }
                 }
@@ -71,4 +73,9 @@ public class CustomerDayObjectFilter : MonoBehaviour
             array[randomIndex] = temp;
         }
     }
+/*
+    private void AddCustomer(GameObject customer){
+        GetComponent<MainGameScript>().listCustomer.Add(customer.GetComponent<Customer>());
+    }
+    */
 }

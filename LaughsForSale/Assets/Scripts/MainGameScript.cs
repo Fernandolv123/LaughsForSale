@@ -166,4 +166,12 @@ public class MainGameScript : MonoBehaviour {
             LoadSelectedObjects(objs);
         }
     }
+
+    public void AddCustomer(GameObject goCustomer) {
+        Customer customerToAdd = goCustomer.GetComponent<Customer>();
+        listCustomer.Add(customerToAdd);
+        customerToAdd.transform.gameObject.transform.parent = canvas.transform.GetChild(3).gameObject.transform;
+        customerToAdd.transform.gameObject.transform.localPosition = new Vector3(0,0,-1);
+        customerToAdd.transform.gameObject.transform.localScale = new Vector2(159, 139);
+    }
 }
