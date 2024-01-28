@@ -49,7 +49,13 @@ public class CustomerObjectReception : MonoBehaviour
         Debug.Log("Puntos " + pointsResult);
         //TODO: Sumar puntos. Feedback usuario. Marcharse y dar paso al siguiemte cliente
 
-        GetComponent<Customer>().StartCustomerOut(pointsResult);
+        if (GetComponent<Boss_Customer>() != null)
+        {
+            GetComponent<Boss_Customer>().StartCustomerOut(pointsResult);
+        }
+        else {
+            GetComponent<Customer>().StartCustomerOut(pointsResult);
+        }
     }
 
     private CharacterObjectInteraction SearchObjectInteraction(string tag)

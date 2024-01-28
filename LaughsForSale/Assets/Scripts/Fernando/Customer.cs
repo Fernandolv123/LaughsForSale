@@ -15,14 +15,14 @@ public class Customer : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
     }
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         active = false;
         customerReady = false;
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
         if (!active){
             sprite.enabled = false;
@@ -44,7 +44,7 @@ public class Customer : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void StartCustomerOut(float pointsResult)
+    public virtual void StartCustomerOut(float pointsResult)
     {
         MainGameScript.instance.SetLaughmeter(pointsResult);
         StartCoroutine("FadeOut");
