@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Customer : MonoBehaviour
@@ -29,21 +30,23 @@ public class Customer : MonoBehaviour
 
             sprite.enabled = true;
             //Si el fadeIn no ha termiando, no se pasar� de cliente
-            if(Input.GetKey(KeyCode.W) && customerReady)
+            /*if(Input.GetKey(KeyCode.W) && customerReady)
             {
                 StartCustomerOut();
-            }
+            }*/
         }
     }
     public void CustomerOut(){
         //Metodo que pasar� de cliente y lo eliminar� de la lista
+
         active = false;
         MainGameScript.instance.atendingCustomer=false;
         Destroy(gameObject);
     }
 
-    public void StartCustomerOut()
+    public void StartCustomerOut(float pointsResult)
     {
+        MainGameScript.instance.SetLaughmeter(pointsResult);
         StartCoroutine("FadeOut");
         Invoke("CustomerOut", 1f);
     }

@@ -14,7 +14,7 @@ public class Smile_Controller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        laughmeter = 50;
     }
 
     // Update is called once per frame

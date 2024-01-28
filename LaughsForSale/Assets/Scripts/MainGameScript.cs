@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MainGameScript : MonoBehaviour {
 
@@ -12,6 +13,7 @@ public class MainGameScript : MonoBehaviour {
 
     public GameObject[] objsSel;
     public Canvas canvas;
+    public Slider slide;
 
     void Awake() {
         instance = this;
@@ -55,5 +57,11 @@ public class MainGameScript : MonoBehaviour {
         //Eliminamos al cliente de la lista
         listCustomer.RemoveAt(listCustomer.Count-1);
         atendingCustomer = true;
+    }
+
+    public void SetLaughmeter(float points)
+    {
+        // Este método es el encargado de cambiar los puntos del laughmeter y de coordinarlo
+        slide.value += points;
     }
 }
