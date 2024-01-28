@@ -883,13 +883,12 @@ MonoBehaviour:
   customers:
   - {fileID: 2325138834413700859, guid: 7d7bf7ecb2a146449a4b714ace34cd53, type: 3}
   - {fileID: 2325138834413700859, guid: 06f0a2f981fd4c54d9bbbb53ae3c7f16, type: 3}
-  - {fileID: 2325138834413700859, guid: 6d573565ee4438a48b6701a8a230e7e6, type: 3}
+  - {fileID: 7591744571275611564, guid: 6d573565ee4438a48b6701a8a230e7e6, type: 3}
   - {fileID: 2325138834413700859, guid: 72e50b82d1905a34f996207985e24d21, type: 3}
   - {fileID: 2325138834413700859, guid: 946a85943bff47b47b8c56e3db8c7f8d, type: 3}
   listCustomer: []
   numberOfCustomers: 0
   atendingCustomer: 0
-  laughmeter: 0
   objsSel:
   - {fileID: 3911372141004692166, guid: c042845493f25244bbcd35f90d1a0c59, type: 3}
   - {fileID: 2835779891078743633, guid: ec126fb2504b2ed4fb6cec55eab494c3, type: 3}
