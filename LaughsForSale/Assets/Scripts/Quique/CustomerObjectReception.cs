@@ -9,10 +9,11 @@ public class CustomerObjectReception : MonoBehaviour
     public List<CharacterObjectInteraction> objectInteractions;
     public List<ComboObjectInteraction> comboInteractions;
 
+
     private CharacterObjectInteraction defaultObjectInteraction;
     private ComboObjectInteraction defaultComboInteraction;
 
-    public 
+    private Customer customer;  
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,8 @@ public class CustomerObjectReception : MonoBehaviour
 
         defaultComboInteraction.comboTag = "Default";
         defaultComboInteraction.comboCondition = 0;
+
+        customer = GetComponent<Customer>();
     }
 
     // Update is called once per frame
@@ -47,6 +50,14 @@ public class CustomerObjectReception : MonoBehaviour
         Debug.Log("Combo recibido " + comboi.comboTag + " condition " + comboi.comboCondition);
 
         Debug.Log("Puntos " + pointsResult);
+
+        if(pointsResult >= 0)
+        {
+            MainGameCustomerSays.instance.Say(customer.frases[2]);
+        } else
+        {
+            MainGameCustomerSays.instance.Say(customer.frases[1]);
+        }
         //TODO: Sumar puntos. Feedback usuario. Marcharse y dar paso al siguiemte cliente
 
         if (GetComponent<Boss_Customer>() != null)

@@ -56,9 +56,14 @@ public class Customer : MonoBehaviour
     public void ChangeActive(bool change){
         //Este es el m�todo que llamar� el GameManager para dar paso a un Cliente
         active = change;
+        if (active)
+        {
+            MainGameCustomerSays.instance.Say(frases[0]);
+        }
     }
     public bool GetActive(){
         return active;
+
     }
 
     IEnumerator FadeOut()
