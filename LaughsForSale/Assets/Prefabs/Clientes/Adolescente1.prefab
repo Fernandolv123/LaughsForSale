@@ -140,7 +140,7 @@ MonoBehaviour:
     killFactor: 1
   - objectTag: Cosplay
     laughScore: -5
-    killFactor: 0
+    killFactor: 1
   comboInteractions: []
 --- !u!114 &2325138834413700859
 MonoBehaviour:

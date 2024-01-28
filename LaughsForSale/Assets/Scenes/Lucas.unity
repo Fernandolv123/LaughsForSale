@@ -642,8 +642,8 @@ MonoBehaviour:
   - {fileID: 3257030415547310390, guid: d50cc91c6c9b2164ab632966fa206d4b, type: 3}
   - {fileID: 3257030415547310390, guid: 7a8b04c584da6ac4797f26ca77bdf362, type: 3}
   - {fileID: 3257030415547310390, guid: 7b89b50757a393a4180f1ebc100b494f, type: 3}
-  - {fileID: 3257030415547310390, guid: 6d573565ee4438a48b6701a8a230e7e6, type: 3}
   - {fileID: 3257030415547310390, guid: 10195f764407e6a489a05af1743e430e, type: 3}
+  - {fileID: 3257030415547310390, guid: 72e50b82d1905a34f996207985e24d21, type: 3}
   testObjectPool:
   - {fileID: 5310018328806615370}
   - {fileID: 8289090752041783717}
@@ -651,6 +651,12 @@ MonoBehaviour:
   - {fileID: 1414725621}
   - {fileID: 6714090511208968502}
   - {fileID: 246265313}
+  bosses:
+  - {fileID: 3257030415547310390, guid: 6d573565ee4438a48b6701a8a230e7e6, type: 3}
+  - {fileID: 3257030415547310390, guid: d50cc91c6c9b2164ab632966fa206d4b, type: 3}
+  - {fileID: 3257030415547310390, guid: 8815a89a2ad84a845b1588f156114933, type: 3}
+  - {fileID: 3257030415547310390, guid: 46a353148f42cb3479c2b66ee3cc6739, type: 3}
+  day: 3
 --- !u!4 &1084173467
 Transform:
   m_ObjectHideFlags: 0
@@ -1020,55 +1026,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1625418263}
   m_CullTransparentMesh: 1
---- !u!1 &1782593065
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1782593067}
-  - component: {fileID: 1782593066}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1782593066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1782593065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6784ea4613b1f7e458f09ec7c419152c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  customer: {fileID: 0}
-  customer2: {fileID: 0}
-  listCustomer: []
-  numberOfCustomers: 0
-  atendingCustomer: 0
---- !u!4 &1782593067
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1782593065}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2062515861
 GameObject:
   m_ObjectHideFlags: 0
@@ -2922,7 +2879,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 2100008578}
   - {fileID: 1084173467}
-  - {fileID: 1782593067}
   - {fileID: 1414725626}
   - {fileID: 1182013063}
   - {fileID: 121573293}
