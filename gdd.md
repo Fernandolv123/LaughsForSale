@@ -145,12 +145,12 @@ Estos serán los mensajes que dirán los personajes:
 - Informático_entrada: "Hello World, may i have some laughs please?"
 - Informatico_salida_bien: "This is the best since I dropped Windows"
 - Informatico_salida_mal: "Wow, that was worse than javascript"
-- Físico: 
-- Fisico_salida_mal: 
-- Fisico_salida_bien: "bad taste = stupidity * bad joke squared"
-- Payaso:
+- Físico: "Einstein would call me crazy for trying comedy twice in a row"
+- Fisico_salida_bien: "I guess Happiness lies in madness"
+- Fisico_salida_mal: "bad taste = stupidity * bad joke squared"
+- Payaso: "What a mess! My grin, upside down"
 - Payaso_salida_mal: "You'll also float, eventually"
-- Payaso_salida_bien: 
+- Payaso_salida_bien: "What's no more with that long face?"
 - Señor mayor_entrada: "Greetings fellow shop assistant, would you mind making my day lighter?"
 - Señor mayor_salida_mal: "Today's young people do not respect other people's time."
 - Señor mayor salida_bien: "Jolly good joke! I can see a bright future upon your hands young man"
@@ -166,7 +166,9 @@ Estos serán los mensajes que dirán los personajes:
 - Chef: "I'll order the house special"
 - Chef_salida_bien: "Cooked to perfection, delicious"
 - Chef_salida_mal: "I think you overcooked that one"
-- Conserje
+- Conserje_entrada: "Everyday same thing, always clean up messes"
+- Conserje_salida_bien: "Grateful, it is good to have someone like you around"
+- Conserje_salida_mal: "I guess i'm not the only one with a rough day, huh?"
 - Niño_entrada: "Hello, I'm sad and my mom sais you rock at making people laugh"
 - Niño_salida_bien: "Hahaha, so funny, can I show that to my friends?"
 - Niño_salida_mal: "That wasn't funny, I'll tell my mom 'bout you"
@@ -176,8 +178,12 @@ Estos serán los mensajes que dirán los personajes:
 - Cura entrada: "Greetings son og God, I have seen better days, I think you know what to do know"
 - Cura salida_bien: "I shall now expire your sins in return"
 - Cura salida_mal: "That was not funny at all... I'll go to childs playground to cheer me up"
-- Hada
-- hombre trajeado
+- Hada_entrada: "How enchanting, a store filled with laughter and mirth, wish I had that"
+- Hada_salida_bien: "I see, the real magic behind this store is nothing but you"
+- Hada_salida_mal: "There is no sparkings nor happyness, it's all just an ilusion isn't it?"
+- hombre trajeado_entrada: "I'm so handsome and yet so gloomy"
+- Hombre Trajeado_salida_bien: "I wasn`t expecting someone who dresses so bad to be that good"
+- Hombre_trajeado_salida_mal: "Im sure your blood is red as the disgusting comunist you are"
 - Comunista: "Every day, my disdain for capitalism only becomes more pronounced"
 - Comunista_bien: "I like you, Velcome to our land, my new potatoenjoyer friend!"
 - Comunista_mal "It is seen that a rebellion was not enough"
@@ -190,7 +196,9 @@ Estos serán los mensajes que dirán los personajes:
 - Robot: "GREETINGS FELLOW HUMAN"
 - Robot_mal: "THAT WAS WORSE THAN THE BITE OF '87"
 - Robot_bien: "HAR HAR HAR HAR, FUNNY JOKE I LAUGHED"
-- Zombie: Este cliente aparecerá a modo de 'jefe'
+- Zombie_entrada: "urrghgrh(Me happy cheer now)"
+- Zombie_salida_bien: "ugrhsghr (Rotten flesh, happier now)"
+- Zombie_salida_mal: " ughrrghrr(Joke unfunny, Zombie hungers)"
 - Perro humanoide_entrada: "Woof, Woof, I had a Ruff Day, can you cheer me up?"
 - Perro humanoide_salida_bien: "Woof, Woof, that was Fur-real Bark-tastic"
 - Perro humanoide_salida_mal: "Woof, Woof, I'm Woof-ly Sorry but I did not liked that"
