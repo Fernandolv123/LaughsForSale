@@ -106,7 +106,7 @@ public class MainGameScript : MonoBehaviour {
             }
         }
 
-        if (intentoALaDesesperadaAllowed && Input.GetKeyDown(KeyCode.L))
+        if (intentoALaDesesperadaAllowed/* && Input.GetKeyDown(KeyCode.L)*/)
         {
             GameObject[] objsSelected = GameObject.FindGameObjectsWithTag("UserSelectionData");
             LoadSelectedObjects(objsSelected);
