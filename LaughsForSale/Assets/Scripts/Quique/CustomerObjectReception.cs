@@ -13,7 +13,8 @@ public class CustomerObjectReception : MonoBehaviour
     private CharacterObjectInteraction defaultObjectInteraction;
     private ComboObjectInteraction defaultComboInteraction;
 
-    private Customer customer;  
+    private Customer customer;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,7 @@ public class CustomerObjectReception : MonoBehaviour
         defaultComboInteraction.comboCondition = 0;
 
         customer = GetComponent<Customer>();
+        
     }
 
     // Update is called once per frame
@@ -51,7 +53,8 @@ public class CustomerObjectReception : MonoBehaviour
 
         Debug.Log("Puntos " + pointsResult);
 
-        if(pointsResult >= 0)
+        ChangeFaceCustomer.instance.ChangeFace((int)pointsResult);
+        if (pointsResult >= 0)
         {
             MainGameCustomerSays.instance.Say(customer.frases[2]);
         } else

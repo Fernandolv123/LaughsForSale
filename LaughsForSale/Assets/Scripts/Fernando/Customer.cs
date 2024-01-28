@@ -50,7 +50,7 @@ public class Customer : MonoBehaviour
     {
         MainGameScript.instance.SetLaughmeter(pointsResult);
         StartCoroutine("FadeOut");
-        Invoke("CustomerOut", 1f);
+        Invoke("CustomerOut", 5f);
     }
 
     public void ChangeActive(bool change){
@@ -69,6 +69,7 @@ public class Customer : MonoBehaviour
     IEnumerator FadeOut()
     {
         //M�todo utilizado para hacer desaparecer a los clientes
+        yield return new WaitForSeconds(3f);
         for (float i = 1; i >= 0; i -= Time.deltaTime)
         {
             sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, i);
