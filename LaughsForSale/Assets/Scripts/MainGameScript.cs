@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MainGameScript : MonoBehaviour {
     public static MainGameScript instance;
@@ -21,6 +22,7 @@ public class MainGameScript : MonoBehaviour {
 
     private bool loadSelectedObjectsFlag;
     private bool intentoALaDesesperadaAllowed = false;
+    private bool started = false;
 
     void Awake() {
         instance = this;
@@ -117,13 +119,16 @@ public class MainGameScript : MonoBehaviour {
         }
         GameObject[] objs = GameObject.FindGameObjectsWithTag("UserSelectionData");
         //Debug.Log($"[MainGameScript.Update] {objs.Length}");
-        if (listCustomer.Count == 0)
+        if (listCustomer.Count == 0 && started)
         {
             //El dia terminaria al estar vacia la lista de clientes
             NextDay();
             return;
         }
         if (atendingCustomer) {
+            if(!started){
+                started = true;
+            }
             //Si hay un cliente siendo atendido, no pasar� al siguiente
             return;
         }
@@ -141,7 +146,12 @@ public class MainGameScript : MonoBehaviour {
     }
 
     private void NextDay() {
-        Debug.Log("FIN DEL JUEGO");
+        if(slide.value >= 50){
+            SceneManager.LoadScene("GoodEnding");
+        }
+        else if(slide.value < 50){
+            SceneManager.LoadScene("BadFinal");
+        }
     }
 
 
