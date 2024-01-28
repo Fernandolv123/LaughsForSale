@@ -135,12 +135,66 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInteractions:
-  - objectTag: Dinero
+  - objectTag: Cerveza
     laughScore: 5
-    killFactor: 1
+    killFactor: 0
+  - objectTag: Chuches
+    laughScore: 0
+    killFactor: 0
   - objectTag: Cosplay
+    laughScore: 0
+    killFactor: 0
+  - objectTag: Dinero
+    laughScore: 0
+    killFactor: 0
+  - objectTag: Escobilla
     laughScore: -5
-    killFactor: 1
+    killFactor: 0
+  - objectTag: Gafas_Graciosas
+    laughScore: -5
+    killFactor: 0
+  - objectTag: Globo
+    laughScore: 0
+    killFactor: 0
+  - objectTag: Matasuegras
+    laughScore: -5
+    killFactor: 0
+  - objectTag: Metal_Pipe
+    laughScore: 5
+    killFactor: 0
+  - objectTag: "Mu\xF1eca"
+    laughScore: -5
+    killFactor: 0
+  - objectTag: Pala_con_bola
+    laughScore: 0
+    killFactor: 0
+  - objectTag: Palo
+    laughScore: 0
+    killFactor: 0
+  - objectTag: Papel_Burbuja
+    laughScore: 0
+    killFactor: 0
+  - objectTag: Pedorreta
+    laughScore: -5
+    killFactor: 0
+  - objectTag: Pelota
+    laughScore: 0
+    killFactor: 0
+  - objectTag: Pepino
+    laughScore: 5
+    killFactor: 0
+  - objectTag: Pistola_Agua
+    laughScore: 0
+    killFactor: 0
+  - objectTag: Pogo
+    laughScore: 0
+    killFactor: 0
+  - objectTag: Tanque
+    laughScore: -5
+    killFactor: 0
+  - objectTag: Videojuego
+    laughScore: 5
+    killFactor: 0
   comboInteractions: []
 --- !u!114 &2325138834413700859
 MonoBehaviour:
