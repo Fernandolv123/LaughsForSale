@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class CustomerDayObjectFilter : MonoBehaviour
 {
-    public GameObject[] CustomerPrefabs;
+    public GameObject[] CustomerPrefabs; // Aquí deberán ir TODOS los prefabs de cliente existentes.
     public GameObject[] testObjectPool; // Este campo es auxiliar, deberá ser sustituido por las referencias a los objetos activos del pool.
-    public GameObject[] bosses; // Se deben añadir los 4 bosses del juego en orden
-    public int day = 1;
+    public GameObject[] bosses; // Se deben añadir los 4 bosses del juego en orden.
+    public int day = 1; // Día actual.
 
     private List<GameObject> filteredCustomers = new List<GameObject>();
-    private int[] clientsDay = {5,6,7,8,10};
+    private readonly int[] clientsDay = {5,6,7,8,10};
     void Start()
     {
         ShuffleArray(CustomerPrefabs);
@@ -25,6 +25,7 @@ public class CustomerDayObjectFilter : MonoBehaviour
     /*Función que recorre y comprueba todos los prefabs existentes y los añade a un nuevo Array el cuál está compuesto por clientes
     con los que siempre es posible por lo menos sacar puntuación neutra para el risometro*/
     //En la función se también se le pasa el parámetro del día para establecer el boss y el número máximo de clientes.
+    // PARA ALEATORIZACIÓN TOTAL AÑADIR EL MÉTODO SHUFFLEARRAY() ANTES DE ESTE MÉTODO.
     private void FilterDayCustomers(int day){
         foreach (GameObject customer in CustomerPrefabs){
             for(int i = 0; i<customer.GetComponent<CustomerObjectReception>().objectInteractions.Count;i++){
