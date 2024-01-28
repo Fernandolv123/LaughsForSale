@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Brais/ProbaLoadScene.unity
     guid: defec561f6132f146849adc32057ffdb
+  - enabled: 1
+    path: Assets/Scenes/GoodEnding.unity
+    guid: e0a153f0a72d85047af2b6b16fb36d18
+  - enabled: 1
+    path: Assets/Scenes/BadFinal.unity
+    guid: 272d48286d6e4c64f991f1debc8023a4
   m_configObjects: {}
