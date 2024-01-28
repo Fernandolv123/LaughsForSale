@@ -1553,7 +1553,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3927cc287eae6d94ba114ea9d1d4f47c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objsSel: []
+  selectedObjectsTags: []
 --- !u!4 &997193015
 Transform:
   m_ObjectHideFlags: 0
