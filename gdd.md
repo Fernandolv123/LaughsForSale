@@ -129,6 +129,60 @@ Los clientes serán:
 
 Los personajes que se aparecerán al día ante el jugador deberan de mantener mínimo una sinergia neutra con alguno de los objetos seleccionados por el jugador.
 
+### Mensajes
+
+Estos serán los mensajes que dirán los personajes:
+
+- Otaku_entrada: "Kon'nichiwa, Is it here were everyone comes to have fun?"
+- Otaku_salida_mal: "That wasn't fun, you'll see me again once I've finished my ninjutsu trainning"
+- Otaku salida_bien: "I have not felt like this since I discovered the one piece left on my cosplay"
+- Fan de los gatos: "Hello, I think you might be able to change my Cat-itude"
+- Fan de los gatos_mal: "You've got to be kitten me, What a CATastrophe"
+- Fan de los gatos_bien: "I'm Feline good, that was purrfect for me"
+- Bruja :
+- Informático_entrada: "Hello World, may i have some laughs please?"
+- Informatico_salida_bien: "This is the best since I dropped Windows"
+- Informatico_salida_mal: "Wow, that was worse than javascript"
+- Físico/Matemático 
+- Payaso
+- Señor mayor_entrada: "Greetings fellow shop assistant, would you mind making my day lighter?"
+- Señor mayor_salida_mal: "Today's young people do not respect other people's time."
+- Señor mayor salida_bien: "Jolly good joke! I can see a bright future upon your hands young man"
+- Emo_entrada: "Hi I guess..., make me smile or whatever..."
+- Emo_salida_mal: "How convenient, an empty attempt for an empty heart..."
+- Emo_salida_bien: "That's pretty good, I had forgotten how good it feelt"
+- Futbolista: "Goal wins"
+- Futbolista_salida_mal: "I cant, i have football"
+- Futbolista_salida_bien: "Tell your friends I was here"
+- Streamer/Youtuber_entrada: "Mondongo"
+- Streamer_salida_bien: "I must tweet how good that was"
+- Streamer_salida_mal: "This is not a game, nothing is"
+- Chef
+- Traficante: este cliente será relevante en la obtencion del final del polvo de la risa.
+- Conserje
+- Niño
+- Alien ???: este cliente será relevante en el final espacial.
+- Fantasma ???: Este cliente resulta algo especial, aparecerá y dirá un chiste antes de irse.
+- Rey
+- Cura
+- Hada
+- hombre trajeado
+- Comunista: Este personaje aparecerá a modo de jefe
+- Jesucristo
+- Mariachi
+- Robot: "GREETINGS FELLOW HUMAN"
+- Robot_mal: "THAT "
+- Robot_bien: 
+- Zombie: Este cliente aparecerá a modo de 'jefe'
+- Perro humanoide:
+- Adolescente x1 entrada: "You can really make people laugh? I-I mean for sure this is fake isn't it?"
+- Adolescente bien: "Hahahaha so funny, I mean, that was pretty good"
+- Adolescente mal: "Bite me, it's hilarious you consider that funny"
+- Adolescente x2
+- Friki entrada: "Hello Inkeeper, how about an exchange of goods and services?"
+- Friki bien: "Haha, I commend joke, I shall now vanish from the store"
+- Friki mal: "The wrath of heaven shall fall upon you, heretic"
+
 ### Combos con personajes
 
 Cada personaje tendrá una serie de objetos preferidos y odiados
