@@ -195,6 +195,9 @@ MonoBehaviour:
   - objectTag: Videojuego
     laughScore: -5
     killFactor: 1
+  - objectTag: Unicornio
+    laughScore: -5
+    killFactor: 1
   comboInteractions: []
 --- !u!114 &2325138834413700859
 MonoBehaviour:
@@ -211,3 +214,7 @@ MonoBehaviour:
   reacciones:
   - {fileID: 21300000, guid: ac231b1dc95ceab4a9b7e82825c4bc02, type: 3}
   - {fileID: 21300000, guid: d02ef88d8653b3d4da37343126bed046, type: 3}
+  frases:
+  - Hello, I think you might be able to change my Cat-itude
+  - You've got to be kitten me, What a CATastrophe
+  - I'm Feline good, that was purrfect for me

@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 3884893160856814329}
   - component: {fileID: 2622385606930883655}
   m_Layer: 0
-  m_Name: Triangle
+  m_Name: Unicornio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -153,8 +153,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: aa9ee7ebdf73fa647a28d16d03c87c39, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34b4c69ba5d8dbc459f43f15ef365f30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectTag: Triangle
+  objectTag: Unicornio
   combo: {fileID: 0}
 --- !u!114 &7357441384198498954
 MonoBehaviour:

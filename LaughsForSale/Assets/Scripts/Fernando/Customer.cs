@@ -9,6 +9,7 @@ public class Customer : MonoBehaviour
     private SpriteRenderer sprite;
     private bool customerReady;
     public Sprite[] reacciones;
+    public string[] frases; 
     private void Awake()
     {
         StartCoroutine("FadeIn");

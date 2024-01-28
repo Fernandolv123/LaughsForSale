@@ -192,8 +192,8 @@ MonoBehaviour:
   - objectTag: Tanque
     laughScore: -5
     killFactor: 1
-  - objectTag: Videojuego
-    laughScore: -5
+  - objectTag: Unicornio
+    laughScore: 0
     killFactor: 1
   comboInteractions: []
 --- !u!114 &2325138834413700859
@@ -211,3 +211,7 @@ MonoBehaviour:
   reacciones:
   - {fileID: 21300000, guid: 79bf3f9d7fd73574ea2c360c344c76dc, type: 3}
   - {fileID: 21300000, guid: 32e6dedf2c351ab48a8afabcb92db6cd, type: 3}
+  frases:
+  - 
+  - 
+  - 

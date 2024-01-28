@@ -195,6 +195,9 @@ MonoBehaviour:
   - objectTag: Videojuego
     laughScore: 5
     killFactor: 1
+  - objectTag: Unicornio
+    laughScore: 0
+    killFactor: 1
   comboInteractions: []
 --- !u!114 &2325138834413700859
 MonoBehaviour:
@@ -211,3 +214,7 @@ MonoBehaviour:
   reacciones:
   - {fileID: 21300000, guid: dfed77e0035f0fa43a6448a5b9323a70, type: 3}
   - {fileID: 21300000, guid: 3244bec653ee8af4a8a58d2efe47b7b8, type: 3}
+  frases:
+  - Goal wins
+  - I cant, i have football
+  - Tell your friends I was here

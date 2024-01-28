@@ -195,6 +195,9 @@ MonoBehaviour:
   - objectTag: Videojuego
     laughScore: -5
     killFactor: 1
+  - objectTag: Unicornio
+    laughScore: 5
+    killFactor: 1
   comboInteractions: []
 --- !u!114 &2325138834413700859
 MonoBehaviour:
@@ -211,3 +214,7 @@ MonoBehaviour:
   reacciones:
   - {fileID: 21300000, guid: f4e7c2155dc7f094db1599382b17388a, type: 3}
   - {fileID: 21300000, guid: 0a51c88ab08ee8041971aefe6d542bc7, type: 3}
+  frases:
+  - 
+  - 
+  - 

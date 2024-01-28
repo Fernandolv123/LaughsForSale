@@ -195,6 +195,9 @@ MonoBehaviour:
   - objectTag: Videojuego
     laughScore: 5
     killFactor: 1
+  - objectTag: Unicornio
+    laughScore: 0
+    killFactor: 1
   comboInteractions: []
 --- !u!114 &2325138834413700859
 MonoBehaviour:
@@ -211,3 +214,7 @@ MonoBehaviour:
   reacciones:
   - {fileID: 21300000, guid: 4170125a8a06a5140a9259b2c7de54c2, type: 3}
   - {fileID: 21300000, guid: 7b901a51dc8790a4692b4873bd6d1386, type: 3}
+  frases:
+  - Mondongo
+  - I must tweet how good that was
+  - This is not a game, nothing is
