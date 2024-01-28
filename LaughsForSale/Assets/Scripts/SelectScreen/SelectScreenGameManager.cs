@@ -103,10 +103,10 @@ public class SelectScreenGameManager : MonoBehaviour {
             UserSelectionData usd = objs[0].GetComponent<UserSelectionData>();
             for(int i=0; i<objsSel.Length; i++)
             {
-                usd.objsSel.Add(objsSel[0]);
+                usd.selectedObjectsTags.Add(objsSel[i].GetComponent<ObjectTag>().objectTag);
             }
         }
 
-        SceneManager.LoadScene("ProbaLoadScene");
+        SceneManager.LoadScene("MainGame");
     }
 }

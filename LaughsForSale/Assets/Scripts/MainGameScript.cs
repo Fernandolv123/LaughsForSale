@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,9 +12,12 @@ public class MainGameScript : MonoBehaviour {
     public static MainGameScript instance;
     public bool atendingCustomer;
 
-    public GameObject[] objsSel;
+    public GameObject[] prefabs;
+    public List<GameObject> objsSel;
     public Canvas canvas;
     public Slider slide;
+
+    private bool loadSelectedObjectsFlag;
 
     void Awake() {
         instance = this;
@@ -30,6 +34,19 @@ public class MainGameScript : MonoBehaviour {
     // Start is called before the first frame update
     void Start()
     {
+        objsSel = new List<GameObject>();
+
+        GameObject[] objsSelected = GameObject.FindGameObjectsWithTag("UserSelectionData");
+        Debug.Log($"[MainGameScript] {objsSelected.Length}");
+        if (objsSelected.Length == 1)
+        {
+            LoadSelectedObjects(objsSelected);
+        }
+        else
+        {
+            loadSelectedObjectsFlag = true;
+        }
+        /*
         for (int i=0; i < objsSel.Length; i++) {
             GameObject go = Instantiate(objsSel[i], new Vector2(0,0), Quaternion.identity);
             //El script DragNDropSelectScreen debe apagarse durante el gameplay de tienda y volver a encenderse durante el de seleccion
@@ -38,11 +55,51 @@ public class MainGameScript : MonoBehaviour {
             go.transform.localPosition = new Vector3(0,0,-1);
             go.transform.localScale = new Vector2(75,75);
         }
+
+        */
     }
+
+    private void LoadSelectedObjects(GameObject[] objs)
+    {
+        UserSelectionData usd = objs[0].GetComponent<UserSelectionData>();
+        for (int i = 0; i < usd.selectedObjectsTags.Count; i++)
+        //foreach(string objectTag in usd.selectedObjectsTags)
+        {
+            string objectTag = usd.selectedObjectsTags[i];
+            GameObject foundPrefab = findObjectPrefabWithTag(objectTag);
+
+            Debug.Log($"[MainGameScript] {objectTag}");
+            GameObject go = Instantiate(foundPrefab, new Vector2(0, 0), Quaternion.identity);
+            objsSel.Add(go);
+
+            //El script DragNDropSelectScreen debe apagarse durante el gameplay de tienda y volver a encenderse durante el de seleccion
+            go.GetComponent<DragNDropSelectScreen>().enabled = false;
+            go.transform.parent = canvas.transform.GetChild(1).gameObject.transform.GetChild(i).gameObject.transform;
+            go.transform.localPosition = new Vector3(0, 0, -1);
+            go.transform.localScale = new Vector2(75, 75);
+        }
+    }
+
 
     // Update is called once per frame
     void Update()
     {
+        if(loadSelectedObjectsFlag)
+        {
+            loadSelectedObjectsFlag = false;
+            GameObject[] objsSelected = GameObject.FindGameObjectsWithTag("UserSelectionData");
+            Debug.Log($"[MainGameScript.Update] {objsSelected.Length}");
+            if (objsSelected.Length == 1)
+            {
+                LoadSelectedObjects(objsSelected);
+            }
+            else
+            {
+                Debug.Log("[MainGameScript] Fallo catastrófico: no se encuentran los objetos selecionados");
+            }
+        }
+        GameObject[] objs = GameObject.FindGameObjectsWithTag("UserSelectionData");
+        Debug.Log($"[MainGameScript.Update] {objs.Length}");
         if (listCustomer.Count == 0)
         {
             //El dia terminaria al estar vacia la lista de clientes
@@ -68,5 +125,20 @@ public class MainGameScript : MonoBehaviour {
 
     private void NextDay() {
         //Poner en este método el proceso de cambio de día
+    }
+
+
+    private GameObject findObjectPrefabWithTag(string objectTag)
+    {
+        string prefabTag;
+        for(int i=0; i<prefabs.Length; i++)
+        {
+            prefabTag = prefabs[i].GetComponent<ObjectTag>().objectTag;
+            if(prefabTag == objectTag)
+            {
+                return prefabs[i];
+            }
+        }
+        return null;
     }
 }

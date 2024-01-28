@@ -52,14 +52,14 @@ public class DragNDropExample : MonoBehaviour
     private void Dropped()
     {
         //GetComponent<SpriteRenderer>().color = Color.white;
-        Debug.Log($"[DragNDropExample] Object {gameObject.name} dropped on {transform.position}");
+        //Debug.Log($"[DragNDropExample] Object {gameObject.name} dropped on {transform.position}");
         CheckForCustomer();
     }
 
     private void Dragged()
     {
         //GetComponent<SpriteRenderer>().color = Color.red;
-        Debug.Log($"[DragNDropExample] Object {gameObject.name} picked up on {transform.position}");
+        //Debug.Log($"[DragNDropExample] Object {gameObject.name} picked up on {transform.position}");
     }
     private void Hovered(Vector3 mousePosition)
     {
