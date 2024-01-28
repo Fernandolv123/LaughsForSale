@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class MainGameScript : MonoBehaviour {
     public static MainGameScript instance;
 
+
     public List<Customer> customers;
     public List<Customer> listCustomer;
     public int numberOfCustomers;
@@ -19,6 +20,7 @@ public class MainGameScript : MonoBehaviour {
     public Slider slide;
 
     private bool loadSelectedObjectsFlag;
+    private bool intentoALaDesesperadaAllowed = false;
 
     void Awake() {
         instance = this;
@@ -99,7 +101,18 @@ public class MainGameScript : MonoBehaviour {
             }
             else
             {
-                Debug.Log("[MainGameScript] Fallo catastrófico: no se encuentran los objetos selecionados");
+                Debug.Log("[MainGameScript] Fallo catastrófico: no se encuentran los objetos selecionados. Pulse L para un intento de cargarlos");
+                intentoALaDesesperadaAllowed = true;
+            }
+        }
+
+        if (intentoALaDesesperadaAllowed && Input.GetKeyDown(KeyCode.L))
+        {
+            GameObject[] objsSelected = GameObject.FindGameObjectsWithTag("UserSelectionData");
+            LoadSelectedObjects(objsSelected);
+            if(objsSel.Count != 0)
+            {
+                intentoALaDesesperadaAllowed = false;
             }
         }
         GameObject[] objs = GameObject.FindGameObjectsWithTag("UserSelectionData");
