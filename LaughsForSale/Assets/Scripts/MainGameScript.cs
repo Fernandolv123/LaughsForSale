@@ -4,8 +4,22 @@ using UnityEngine;
 
 public class MainGameScript : MonoBehaviour {
 
+    public List<Customer> listCustomer;
+    public int numberOfCustomers;
+    public static MainGameScript instance;
+    public bool atendingCustomer;
+
     public GameObject[] objsSel;
     public Canvas canvas;
+
+    void Awake() {
+        instance = this;
+        numberOfCustomers = 5;
+        //Creamos usuarios de prueba
+        for (int i = 0; i < numberOfCustomers; i++)
+        {
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +36,21 @@ public class MainGameScript : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        
+        if (listCustomer.Count == 0)
+        {
+            //El dia terminaria al estar vacia la lista de clientes
+            Debug.Log("Vacia");
+            return;
+        }
+        if (atendingCustomer) {
+            //Si hay un cliente siendo atendido, no pasar� al siguiente
+            return;
+        }
+        //Pasamos al siguiente cliente si no estamos atendiendo a ninguno
+        listCustomer[listCustomer.Count-1].ChangeActive(true);
+        //Eliminamos al cliente de la lista
+        listCustomer.RemoveAt(listCustomer.Count-1);
+        atendingCustomer = true;
+
     }
 }

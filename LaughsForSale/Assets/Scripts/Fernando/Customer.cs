@@ -7,6 +7,7 @@ public class Customer : MonoBehaviour
     private bool active = false;
     private SpriteRenderer sprite;
     private bool customerReady;
+    public Sprite[] reacciones;
     private void Awake()
     {
         StartCoroutine("FadeIn");
@@ -27,7 +28,7 @@ public class Customer : MonoBehaviour
         } else {
 
             sprite.enabled = true;
-            //Si el fadeIn no ha termiando, no se pasará de cliente
+            //Si el fadeIn no ha termiando, no se pasarï¿½ de cliente
             if(Input.GetKey(KeyCode.W) && customerReady)
             {
                 StartCustomerOut();
@@ -35,7 +36,7 @@ public class Customer : MonoBehaviour
         }
     }
     public void CustomerOut(){
-        //Metodo que pasará de cliente y lo eliminará de la lista
+        //Metodo que pasarï¿½ de cliente y lo eliminarï¿½ de la lista
         active = false;
         GameManager.instance.atendingCustomer=false;
         Destroy(gameObject);
@@ -48,7 +49,7 @@ public class Customer : MonoBehaviour
     }
 
     public void ChangeActive(bool change){
-        //Este es el método que llamará el GameManager para dar paso a un Cliente
+        //Este es el mï¿½todo que llamarï¿½ el GameManager para dar paso a un Cliente
         active = change;
     }
     public bool GetActive(){
@@ -57,7 +58,7 @@ public class Customer : MonoBehaviour
 
     IEnumerator FadeOut()
     {
-        //Método utilizado para hacer desaparecer a los clientes
+        //Mï¿½todo utilizado para hacer desaparecer a los clientes
         for (float i = 1; i >= 0; i -= Time.deltaTime)
         {
             sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, i);
@@ -67,7 +68,7 @@ public class Customer : MonoBehaviour
 
     IEnumerator FadeIn()
     {
-        //Método usado para hacer aparecer a los clientes
+        //Mï¿½todo usado para hacer aparecer a los clientes
         while (!active) {
             yield return null;
         }
