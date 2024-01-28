@@ -36,6 +36,8 @@ public class CustomerDayObjectFilter : MonoBehaviour
     //En la función se también se le pasa el parámetro del día para establecer el boss y el número máximo de clientes.
     // PARA ALEATORIZACIÓN TOTAL AÑADIR EL MÉTODO SHUFFLEARRAY() ANTES DE ESTE MÉTODO.
     private void FilterDayCustomers(int day){
+        List<GameObject> addedCustomers = new List<GameObject>();
+
         foreach (GameObject customer in customerPrefabs){
             for(int i = 0; i<customer.GetComponent<CustomerObjectReception>().objectInteractions.Count;i++){
                 for(int y = 0; y<currentObjectPool.Length;y++){
@@ -47,11 +49,12 @@ public class CustomerDayObjectFilter : MonoBehaviour
                     }
                     if(customer.GetComponent<CustomerObjectReception>().objectInteractions[i].objectTag == currentObjectPool[y].GetComponent<ObjectTag>().objectTag
                     && customer.GetComponent<CustomerObjectReception>().objectInteractions[i].laughScore >= 0){
-                        if(!filteredCustomers.Contains(customer)){
+                        if(!addedCustomers.Contains(customer)){
                             Debug.Log(customer.name);
                             GameObject goCustomer = Instantiate(customer, new Vector2(0,0), Quaternion.identity);
                             filteredCustomers.Add(goCustomer);
                             MainGameScript.instance.AddCustomer(goCustomer);
+                            addedCustomers.Add(customer);
                         }
                     }
                 }
