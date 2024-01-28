@@ -139,12 +139,18 @@ Estos serán los mensajes que dirán los personajes:
 - Fan de los gatos: "Hello, I think you might be able to change my Cat-itude"
 - Fan de los gatos_mal: "You've got to be kitten me, What a CATastrophe"
 - Fan de los gatos_bien: "I'm Feline good, that was purrfect for me"
-- Bruja :
+- Bruja: "Bibidi Babidi Du joke or a curse upon you"
+- Bruja_salida_bien: "Pretty good, I'll remember your doings when I strike"
+- Bruja_salida_mal: "That was awfull, And people say I'm the witch?"
 - Informático_entrada: "Hello World, may i have some laughs please?"
 - Informatico_salida_bien: "This is the best since I dropped Windows"
 - Informatico_salida_mal: "Wow, that was worse than javascript"
-- Físico/Matemático 
-- Payaso
+- Físico: 
+- Fisico_salida_mal: 
+- Fisico_salida_bien: "bad taste = stupidity * bad joke squared"
+- Payaso:
+- Payaso_salida_mal: "You'll also float, eventually"
+- Payaso_salida_bien: 
 - Señor mayor_entrada: "Greetings fellow shop assistant, would you mind making my day lighter?"
 - Señor mayor_salida_mal: "Today's young people do not respect other people's time."
 - Señor mayor salida_bien: "Jolly good joke! I can see a bright future upon your hands young man"
@@ -157,28 +163,43 @@ Estos serán los mensajes que dirán los personajes:
 - Streamer/Youtuber_entrada: "Mondongo"
 - Streamer_salida_bien: "I must tweet how good that was"
 - Streamer_salida_mal: "This is not a game, nothing is"
-- Chef
-- Traficante: este cliente será relevante en la obtencion del final del polvo de la risa.
+- Chef: "I'll order the house special"
+- Chef_salida_bien: "Cooked to perfection, delicious"
+- Chef_salida_mal: "I think you overcooked that one"
 - Conserje
-- Niño
-- Alien ???: este cliente será relevante en el final espacial.
-- Fantasma ???: Este cliente resulta algo especial, aparecerá y dirá un chiste antes de irse.
-- Rey
-- Cura
+- Niño_entrada: "Hello, I'm sad and my mom sais you rock at making people laugh"
+- Niño_salida_bien: "Hahaha, so funny, can I show that to my friends?"
+- Niño_salida_mal: "That wasn't funny, I'll tell my mom 'bout you"
+- Rey: "ugh, I hate stepping into tacky stores"
+- Rey_salida_bien: "All this power and wealth and still, this commoners always make me laugh harder"
+- Rey_salida_mal: "A hundred years ago, I would order you kill"
+- Cura entrada: "Greetings son og God, I have seen better days, I think you know what to do know"
+- Cura salida_bien: "I shall now expire your sins in return"
+- Cura salida_mal: "That was not funny at all... I'll go to childs playground to cheer me up"
 - Hada
 - hombre trajeado
-- Comunista: Este personaje aparecerá a modo de jefe
-- Jesucristo
-- Mariachi
+- Comunista: "Every day, my disdain for capitalism only becomes more pronounced"
+- Comunista_bien: "I like you, Velcome to our land, my new potatoenjoyer friend!"
+- Comunista_mal "It is seen that a rebellion was not enough"
+- Jesucristo: "Greetings, son of God, it is I Jesus and I am here for you to please me"
+- Jesucristo_bien: "My faith in humanity has been restored"
+- Jesucristo_mal: "One flood was not enough"
+- Mariachi: "Hola compadre, I cant concentrate in my music, can you help me?"
+- Mariachi_bueno: "Así si!, I have a new rhythm to flow"
+- Mariachi_mal: "Pinche pendejo, thats not funny at all"
 - Robot: "GREETINGS FELLOW HUMAN"
-- Robot_mal: "THAT "
-- Robot_bien: 
+- Robot_mal: "THAT WAS WORSE THAN THE BITE OF '87"
+- Robot_bien: "HAR HAR HAR HAR, FUNNY JOKE I LAUGHED"
 - Zombie: Este cliente aparecerá a modo de 'jefe'
-- Perro humanoide:
+- Perro humanoide_entrada: "Woof, Woof, I had a Ruff Day, can you cheer me up?"
+- Perro humanoide_salida_bien: "Woof, Woof, that was Fur-real Bark-tastic"
+- Perro humanoide_salida_mal: "Woof, Woof, I'm Woof-ly Sorry but I did not liked that"
 - Adolescente x1 entrada: "You can really make people laugh? I-I mean for sure this is fake isn't it?"
-- Adolescente bien: "Hahahaha so funny, I mean, that was pretty good"
-- Adolescente mal: "Bite me, it's hilarious you consider that funny"
-- Adolescente x2
+- Adolescente x1 bien: "Hahahaha so funny, I mean, that was pretty good"
+- Adolescente x1 mal: "Bite me, it's hilarious you consider that funny"
+- Adolescente x2 entrada: "Update: entering an ol' boomer shop, i'm pretty sure this doesn't work"
+- Adolescente x2 salida_mal: "Update: Worst place EVER, tldr, it wasn't funny at all, this person DEFINETLY doesn't know the drill"
+- Adolescente x2 salida_bien: "Update: OH MY GOSH YOU GUYS HAVE TO CHECK THIS, IT WAS AWESOME"
 - Friki entrada: "Hello Inkeeper, how about an exchange of goods and services?"
 - Friki bien: "Haha, I commend joke, I shall now vanish from the store"
 - Friki mal: "The wrath of heaven shall fall upon you, heretic"
