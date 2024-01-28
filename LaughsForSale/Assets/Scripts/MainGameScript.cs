@@ -46,6 +46,7 @@ public class MainGameScript : MonoBehaviour {
         if (listCustomer.Count == 0)
         {
             //El dia terminaria al estar vacia la lista de clientes
+            NextDay();
             return;
         }
         if (atendingCustomer) {
@@ -63,5 +64,9 @@ public class MainGameScript : MonoBehaviour {
     {
         // Este método es el encargado de cambiar los puntos del laughmeter y de coordinarlo
         slide.value += points;
+    }
+
+    private void NextDay() {
+        //Poner en este método el proceso de cambio de día
     }
 }
