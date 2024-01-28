@@ -28,10 +28,11 @@ public class MouseDragNDrop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if(SelectScreenGameManager.instance.freezeInteraction)
-        {
-            return;
+        if (GetComponent<DragNDropSelectScreen>().isActiveAndEnabled) {
+            if(SelectScreenGameManager.instance.freezeInteraction)
+            {
+                return;
+            }
         }
 
         boundingBox = GetBoundingBox();
@@ -39,7 +40,7 @@ public class MouseDragNDrop : MonoBehaviour
         {
             if (IsClicked())
             {
-                if (GetComponent<DragNDropSelectScreen>().gameObject.activeSelf) {
+                if (GetComponent<DragNDropSelectScreen>().isActiveAndEnabled) {
                     SelectScreenGameManager.instance.objSel = SelectScreenGameManager.instance.objsDisp[GetComponentInParent<DragNDropSelectScreen>().indexDisp];
                 }
                 mouseToObjectOffset = transform.position - MouseWorldPosition();

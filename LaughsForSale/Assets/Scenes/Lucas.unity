@@ -318,6 +318,7 @@ GameObject:
   - component: {fileID: 246265314}
   - component: {fileID: 246265318}
   - component: {fileID: 246265317}
+  - component: {fileID: 246265319}
   m_Layer: 0
   m_Name: Beer
   m_TagString: Untagged
@@ -445,6 +446,21 @@ MonoBehaviour:
   ObjectHoverExited:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &246265319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246265313}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07e868a3acdc0ee46982267c98c4720b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indexDisp: 0
+  indexSel: 0
+  selected: 0
 --- !u!114 &304866610 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2927512774261273321, guid: 57d3cece92e81954bbc08c8e3dfc049b, type: 3}
@@ -717,6 +733,7 @@ GameObject:
   - component: {fileID: 1414725624}
   - component: {fileID: 1414725623}
   - component: {fileID: 1414725622}
+  - component: {fileID: 1414725627}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -844,6 +861,21 @@ Transform:
   - {fileID: 2062515865}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1414725627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414725621}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07e868a3acdc0ee46982267c98c4720b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  indexDisp: 0
+  indexSel: 0
+  selected: 0
 --- !u!1 &1600972309
 GameObject:
   m_ObjectHideFlags: 0

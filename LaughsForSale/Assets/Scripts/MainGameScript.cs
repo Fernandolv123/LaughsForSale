@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MainGameScript : MonoBehaviour {
 
+    public List<Customer> customers;
     public List<Customer> listCustomer;
     public int numberOfCustomers;
     public static MainGameScript instance;
@@ -16,8 +17,11 @@ public class MainGameScript : MonoBehaviour {
         instance = this;
         numberOfCustomers = 5;
         //Creamos usuarios de prueba
-        for (int i = 0; i < numberOfCustomers; i++)
-        {
+        for (int i = 0; i < customers.Count; i++) {
+            listCustomer.Add(Instantiate(customers[i], new Vector2(0,0), Quaternion.identity));
+            listCustomer[i].transform.gameObject.transform.parent = canvas.transform.GetChild(3).gameObject.transform;
+            listCustomer[i].transform.gameObject.transform.localPosition = new Vector3(0,0,-1);
+            listCustomer[i].transform.gameObject.transform.localScale = new Vector2(159, 139);
         }
     }
 
@@ -25,8 +29,9 @@ public class MainGameScript : MonoBehaviour {
     void Start()
     {
         for (int i=0; i < objsSel.Length; i++) {
-            Vector3 pos = canvas.transform.GetChild(1).gameObject.transform.GetChild(i).gameObject.transform.position;
             GameObject go = Instantiate(objsSel[i], new Vector2(0,0), Quaternion.identity);
+            //El script DragNDropSelectScreen debe apagarse durante el gameplay de tienda y volver a encenderse durante el de seleccion
+            go.GetComponent<DragNDropSelectScreen>().enabled = false;
             go.transform.parent = canvas.transform.GetChild(1).gameObject.transform.GetChild(i).gameObject.transform;
             go.transform.localPosition = new Vector3(0,0,-1);
             go.transform.localScale = new Vector2(75,75);
@@ -39,7 +44,6 @@ public class MainGameScript : MonoBehaviour {
         if (listCustomer.Count == 0)
         {
             //El dia terminaria al estar vacia la lista de clientes
-            Debug.Log("Vacia");
             return;
         }
         if (atendingCustomer) {
@@ -51,6 +55,5 @@ public class MainGameScript : MonoBehaviour {
         //Eliminamos al cliente de la lista
         listCustomer.RemoveAt(listCustomer.Count-1);
         atendingCustomer = true;
-
     }
 }

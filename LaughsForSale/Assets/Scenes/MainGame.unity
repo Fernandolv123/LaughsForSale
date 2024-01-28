@@ -701,12 +701,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60d41d762316301438ae4c692d647427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  listCustomer:
+  customers:
   - {fileID: 2325138834413700859, guid: 7d7bf7ecb2a146449a4b714ace34cd53, type: 3}
   - {fileID: 2325138834413700859, guid: 06f0a2f981fd4c54d9bbbb53ae3c7f16, type: 3}
   - {fileID: 2325138834413700859, guid: 6d573565ee4438a48b6701a8a230e7e6, type: 3}
   - {fileID: 2325138834413700859, guid: 72e50b82d1905a34f996207985e24d21, type: 3}
   - {fileID: 2325138834413700859, guid: 946a85943bff47b47b8c56e3db8c7f8d, type: 3}
+  listCustomer: []
   numberOfCustomers: 5
   atendingCustomer: 0
   objsSel:

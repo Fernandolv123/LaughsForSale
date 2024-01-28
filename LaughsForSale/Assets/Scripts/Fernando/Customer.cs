@@ -38,7 +38,7 @@ public class Customer : MonoBehaviour
     public void CustomerOut(){
         //Metodo que pasar� de cliente y lo eliminar� de la lista
         active = false;
-        GameManager.instance.atendingCustomer=false;
+        MainGameScript.instance.atendingCustomer=false;
         Destroy(gameObject);
     }
 
