@@ -5,21 +5,31 @@ using UnityEngine;
 public class CustomerDayObjectFilter : MonoBehaviour
 {
     public GameObject[] CustomerPrefabs; // Aquí deberán ir TODOS los prefabs de cliente existentes.
-    public GameObject[] testObjectPool; // Este campo es auxiliar, deberá ser sustituido por las referencias a los objetos activos del pool.
+    public GameObject[] currentObjectPool; 
     public GameObject[] bosses; // Se deben añadir los 4 bosses del juego en orden.
     public int day = 1; // Día actual.
 
     private List<GameObject> filteredCustomers = new List<GameObject>();
     private readonly int[] clientsDay = {5,6,7,8,10};
+    private bool loadObjectsFlag = true;
     void Start()
     {
+        Debug.Log(GetComponent<MainGameScript>().objsSel[0]+"Primer objeto");
+        currentObjectPool = GetComponent<MainGameScript>().objsSel.ToArray();
         ShuffleArray(CustomerPrefabs);
         FilterDayCustomers(day);
     }
 
     void Update()
     {
-        
+
+        if(loadObjectsFlag){
+            if(MainGameScript.instance.objsSel.Count>0){
+                currentObjectPool = GetComponent<MainGameScript>().objsSel.ToArray();
+                loadObjectsFlag = false;
+            }
+            
+        }
     }
 
     /*Función que recorre y comprueba todos los prefabs existentes y los añade a un nuevo Array el cuál está compuesto por clientes
@@ -29,14 +39,14 @@ public class CustomerDayObjectFilter : MonoBehaviour
     private void FilterDayCustomers(int day){
         foreach (GameObject customer in CustomerPrefabs){
             for(int i = 0; i<customer.GetComponent<CustomerObjectReception>().objectInteractions.Count;i++){
-                for(int y = 0; y<testObjectPool.Length;y++){
+                for(int y = 0; y<currentObjectPool.Length;y++){
                     if(filteredCustomers.Count+1 == clientsDay[day-1]){
                         if(day > 1){
                             filteredCustomers.Add(bosses[day-2]);
                         }
                         return;
                     }
-                    if(customer.GetComponent<CustomerObjectReception>().objectInteractions[i].objectTag == testObjectPool[y].GetComponent<ObjectTag>().objectTag
+                    if(customer.GetComponent<CustomerObjectReception>().objectInteractions[i].objectTag == currentObjectPool[y].GetComponent<ObjectTag>().objectTag
                     && customer.GetComponent<CustomerObjectReception>().objectInteractions[i].laughScore >= 0){
                         if(!filteredCustomers.Contains(customer)){
                             filteredCustomers.Add(customer);
