@@ -9,6 +9,7 @@ public class DropObject : MonoBehaviour
     
     Rect boundingBox;
     public static DropObject instance;
+
     // Start is called before the first frame update
 
     void Awake() {
@@ -22,7 +23,9 @@ public class DropObject : MonoBehaviour
         float cWidth = rectT.rect.width * rectT.localScale.x * transform.localScale.x * rectTCanvas.localScale.x; //0.02338634f;
         float cHeight = rectT.rect.height * rectT.localScale.y * transform.localScale.y  * rectTCanvas.localScale.y; // 0.02338634f;
 
-        boundingBox = new Rect(transform.position.x - cWidth / 2, transform.position.y -  cHeight / 2, cWidth, cHeight);        
+        
+
+        boundingBox = new Rect(transform.position.x - cWidth / 2, transform.position.y -  cHeight / 2, cWidth, cHeight);
     }
 
     // Update is called once per frame

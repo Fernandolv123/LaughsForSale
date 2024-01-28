@@ -31,6 +31,10 @@ public class SelectScreenGameManager : MonoBehaviour {
             GameObject go = Instantiate(prefabs[i], new Vector2(0,0), Quaternion.identity);
             go.SetActive(false);
             objetos[i] = go;
+
+            //En la pantalla de selección de objetos es necesario desactivar el componente DragNDropExample (TODO: cambiarle el nombre)
+            //y dejar funcionando solo el DragNDropSelectScreen
+            go.GetComponent<DragNDropExample>().enabled = false;
         }
 
         objsDisp = new List<GameObject>();

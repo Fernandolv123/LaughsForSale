@@ -33,6 +33,7 @@ public class DragNDropSelectScreen : MonoBehaviour
     {
         if (!selected) {
             if (DropObject.instance.CheckPosition(worldToUISpace(SelectScreenGameManager.instance.canvas, transform.position))) {
+                //Debug.Log("[DragNDropSelectScreen] Drop en seleccion");
                 for (int i = 0; i < SelectScreenGameManager.instance.objsSel.Length; i++) {
                     if (SelectScreenGameManager.instance.objsSel[i] == null) {
                         SelectScreenGameManager.instance.objsSel[i] = SelectScreenGameManager.instance.objsDisp[indexDisp];
@@ -46,6 +47,7 @@ public class DragNDropSelectScreen : MonoBehaviour
             }
         } else {
             if (!DropObject.instance.CheckPosition(worldToUISpace(SelectScreenGameManager.instance.canvas, transform.position))) {
+                //Debug.Log("[DragNDropSelectScreen] Drop fuera de seleccion");
                 SelectScreenGameManager.instance.objsSel[indexSel] = null;
                 transform.parent = SelectScreenGameManager.instance.canvas.transform.GetChild(0).gameObject.transform.GetChild(indexDisp).gameObject.transform;
                 transform.localScale = new Vector2(100, 100);
