@@ -130,7 +130,7 @@ public class MainGameScript : MonoBehaviour {
         //Pasamos al siguiente cliente si no estamos atendiendo a ninguno
         listCustomer[listCustomer.Count-1].ChangeActive(true);
         //Eliminamos al cliente de la lista
-        listCustomer.RemoveAt(listCustomer.Count-1);
+        //listCustomer.RemoveAt(listCustomer.Count-1);
         atendingCustomer = true;
     }
 
@@ -141,7 +141,7 @@ public class MainGameScript : MonoBehaviour {
     }
 
     private void NextDay() {
-        //Poner en este método el proceso de cambio de día
+        Debug.Log("FIN DEL JUEGO");
     }
 
 
@@ -173,5 +173,9 @@ public class MainGameScript : MonoBehaviour {
         customerToAdd.transform.gameObject.transform.parent = canvas.transform.GetChild(3).gameObject.transform;
         customerToAdd.transform.gameObject.transform.localPosition = new Vector3(0,0,-1);
         customerToAdd.transform.gameObject.transform.localScale = new Vector2(159, 139);
+    }
+
+    public void UpdateList(){
+        listCustomer.RemoveAt(listCustomer.Count-1);
     }
 }

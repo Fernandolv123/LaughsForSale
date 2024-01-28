@@ -32,7 +32,7 @@ public class SelectScreenGameManager : MonoBehaviour {
             go.SetActive(false);
             objetos[i] = go;
 
-            //En la pantalla de selección de objetos es necesario desactivar el componente DragNDropExample (TODO: cambiarle el nombre)
+            //En la pantalla de selecciï¿½n de objetos es necesario desactivar el componente DragNDropExample (TODO: cambiarle el nombre)
             //y dejar funcionando solo el DragNDropSelectScreen
             go.GetComponent<DragNDropExample>().enabled = false;
         }

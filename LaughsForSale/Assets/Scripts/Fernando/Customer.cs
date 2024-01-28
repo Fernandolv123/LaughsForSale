@@ -42,6 +42,7 @@ public class Customer : MonoBehaviour
 
         active = false;
         MainGameScript.instance.atendingCustomer=false;
+        MainGameScript.instance.UpdateList();
         Destroy(gameObject);
     }
 
