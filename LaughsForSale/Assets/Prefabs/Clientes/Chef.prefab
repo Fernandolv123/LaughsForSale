@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInteractions:
-  - objectTag: Flower
+  - objectTag: Pala_con_bola
     laughScore: 10
     killFactor: 1
   - objectTag: Gun

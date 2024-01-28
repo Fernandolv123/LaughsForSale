@@ -135,15 +135,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInteractions:
-  - objectTag: Flower
-    laughScore: 10
+  - objectTag: Dinero
+    laughScore: 5
     killFactor: 1
-  - objectTag: Gun
+  - objectTag: Cosplay
     laughScore: -5
     killFactor: 0
-  comboInteractions:
-  - comboTag: Stick
-    comboCondition: 2
+  comboInteractions: []
 --- !u!114 &2325138834413700859
 MonoBehaviour:
   m_ObjectHideFlags: 0

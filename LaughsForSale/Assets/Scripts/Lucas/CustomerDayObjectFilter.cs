@@ -5,19 +5,38 @@ using UnityEngine;
 public class CustomerDayObjectFilter : MonoBehaviour
 {
     public GameObject[] CustomerPrefabs;
-    public GameObject[] testObjectPool;
+    public GameObject[] testObjectPool; // Este campo es auxiliar, deberá ser sustituido por las referencias a los objetos activos del pool.
+    public GameObject[] bosses; // Se deben añadir los 4 bosses del juego en orden
+    public int day = 1;
+
     private List<GameObject> filteredCustomers = new List<GameObject>();
-    private int day;
+    private int[] clientsDay = {5,6,7,8,10};
     void Start()
     {
+        ShuffleArray(CustomerPrefabs);
+        FilterDayCustomers(day);
+    }
+
+    void Update()
+    {
+        
+    }
+
+    /*Función que recorre y comprueba todos los prefabs existentes y los añade a un nuevo Array el cuál está compuesto por clientes
+    con los que siempre es posible por lo menos sacar puntuación neutra para el risometro*/
+    //En la función se también se le pasa el parámetro del día para establecer el boss y el número máximo de clientes.
+    private void FilterDayCustomers(int day){
         foreach (GameObject customer in CustomerPrefabs){
             for(int i = 0; i<customer.GetComponent<CustomerObjectReception>().objectInteractions.Count;i++){
-                for(int y = 0; y<customer.GetComponent<CustomerObjectReception>().objectInteractions.Count;y++){
+                for(int y = 0; y<testObjectPool.Length;y++){
+                    if(filteredCustomers.Count+1 == clientsDay[day-1]){
+                        if(day > 1){
+                            filteredCustomers.Add(bosses[day-2]);
+                        }
+                        return;
+                    }
                     if(customer.GetComponent<CustomerObjectReception>().objectInteractions[i].objectTag == testObjectPool[y].GetComponent<ObjectTag>().objectTag
                     && customer.GetComponent<CustomerObjectReception>().objectInteractions[i].laughScore >= 0){
-                        Debug.Log(customer.GetComponent<CustomerObjectReception>().objectInteractions[i].laughScore);
-                        Debug.Log("ENCONTRADO");
-                        Debug.Log(customer.name);
                         if(!filteredCustomers.Contains(customer)){
                             filteredCustomers.Add(customer);
                         }
@@ -27,10 +46,18 @@ public class CustomerDayObjectFilter : MonoBehaviour
             
         }
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    //Función que aleatoriza un Array de GameObjects, principalmente utilizado para que no se repitan siempre los mismos clientes.
+    void ShuffleArray(GameObject[] array)
     {
-        
+        System.Random random = new System.Random();
+
+        for (int i = array.Length - 1; i > 0; i--)
+        {
+            int randomIndex = random.Next(0, i + 1);
+            GameObject temp = array[i];
+            array[i] = array[randomIndex];
+            array[randomIndex] = temp;
+        }
     }
 }
