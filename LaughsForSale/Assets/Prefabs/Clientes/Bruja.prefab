@@ -137,19 +137,19 @@ MonoBehaviour:
   objectInteractions:
   - objectTag: Cerveza
     laughScore: 0
-    killFactor: 0
+    killFactor: 1
   - objectTag: Chuches
     laughScore: -5
-    killFactor: 0
+    killFactor: 1
   - objectTag: Cosplay
     laughScore: 0
-    killFactor: 0
+    killFactor: 1
   - objectTag: Dinero
     laughScore: -5
-    killFactor: 0
+    killFactor: 1
   - objectTag: Escobilla
     laughScore: 0
-    killFactor: 0
+    killFactor: 1
   - objectTag: Gafas_Graciosas
     laughScore: -5
     killFactor: 0
@@ -161,16 +161,16 @@ MonoBehaviour:
     killFactor: 0
   - objectTag: Metal_Pipe
     laughScore: -5
-    killFactor: 0
+    killFactor: 1
   - objectTag: "Mu\xF1eca"
     laughScore: 5
-    killFactor: 0
+    killFactor: 1
   - objectTag: Pala_con_bola
     laughScore: -5
-    killFactor: 0
+    killFactor: 1
   - objectTag: Palo
     laughScore: 5
-    killFactor: 0
+    killFactor: 1
   - objectTag: Papel_Burbuja
     laughScore: 0
     killFactor: 0
